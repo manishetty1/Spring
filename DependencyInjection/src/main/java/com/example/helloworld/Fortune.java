@@ -1,7 +1,6 @@
 package com.example.helloworld;
 
-public interface Coach
+public interface Fortune
 {
-    public String getDailyWorkOut();
     public String getDailyFortune();
 }
