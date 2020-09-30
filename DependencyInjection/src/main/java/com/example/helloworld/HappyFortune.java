@@ -1,9 +1,10 @@
 package com.example.helloworld;
 
-public class HappyFortune
+public class HappyFortune implements Fortune
 {
-    public HappyFortune()
+    @Override
+    public String getDailyFortune()
     {
-        System.out.println("Happy fortune created");
+        return "It's your lucky day today";
     }
 }

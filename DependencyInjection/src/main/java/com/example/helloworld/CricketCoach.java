@@ -1,18 +1,28 @@
 package com.example.helloworld;
 
-public class CricketCoach
+public class CricketCoach implements Coach
 {
-    HappyFortune fortune;
+    Fortune fortune;
 
-    public HappyFortune getFortune() {
+    public Fortune getFortune()
+    {
         return fortune;
     }
 
-    public void setFortune(HappyFortune fortune) {
+    public void setFortune(Fortune fortune)
+    {
         this.fortune = fortune;
     }
 
+    @Override
+    public String getDailyWorkOut()
+    {
+        return null;
+    }
 
-
-
+    @Override
+    public String getDailyFortune()
+    {
+        return this.fortune.getDailyFortune();
+    }
 }

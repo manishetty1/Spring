@@ -1,10 +1,10 @@
 package com.example.helloworld;
 
-public class SadFortune implements Fortune
+public class BadFortune implements Fortune
 {
     @Override
     public String getDailyFortune()
     {
-        return "Its your unlucky day today!!!";
+        return "It's your unlucky day today";
     }
 }

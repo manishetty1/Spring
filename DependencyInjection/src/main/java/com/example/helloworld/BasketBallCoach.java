@@ -1,18 +1,31 @@
 package com.example.helloworld;
 
-public class BasketBallCoach
+public class BasketBallCoach implements Coach
 {
-    HappyFortune fortune;
+    Fortune fortune;
 
     public BasketBallCoach()
     {
         System.out.println("BasketBall constructor");
     }
 
-    public void setFortune(HappyFortune fortune)
+    public void setFortune(Fortune fortune)
     {
         System.out.println("BasketBallCoach: setfortune method");
         this.fortune = fortune;
     }
+
+    @Override
+    public String getDailyFortune()
+    {
+        return this.fortune.getDailyFortune();
+    }
+
+    @Override
+    public String getDailyWorkOut()
+    {
+        return null;
+    }
+
 
 }

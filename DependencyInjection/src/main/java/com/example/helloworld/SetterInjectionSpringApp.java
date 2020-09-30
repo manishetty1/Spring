@@ -8,18 +8,13 @@ public class SetterInjectionSpringApp
     public static void main(String[] args)
     {
         //get application context
-        try(ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("chapters7/spring.xml"))
+        try(ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml"))
         {
+            Coach coach =context.getBean("CricketCoachBean", Coach.class);
+            System.out.println(coach.getDailyFortune());
 
+           /* Coach coach =context.getBean("BasketCoachBean", Coach.class);
+            System.out.println(coach.getDailyFortune());*/
         }
-
-        //get the bean from application context
-       // context.getBean("basketBallCoachBean");
-
-        //invoke methods on the bean
-        //System.out.println(coachObj.getDailyFortune());
-
-        //close application context
-        //context.close();
     }
 }

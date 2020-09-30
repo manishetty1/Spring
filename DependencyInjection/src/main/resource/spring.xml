@@ -7,8 +7,13 @@
 		<property name="fortune" ref="happyFortuneBean" />
 	</bean>
 
+	<bean id="BasketCoachBean" class="com.example.helloworld.BasketBallCoach">
+		<property name="fortune" ref="badFortuneBean" />
+	</bean>
 
 	<bean id="happyFortuneBean" class="com.example.helloworld.HappyFortune" />
+	<bean id="badFortuneBean" class="com.example.helloworld.BadFortune" />
+
 
 	<!--Constructor injection
     <bean id="myCoach" class="com.example.helloworld.CricketCoach">
