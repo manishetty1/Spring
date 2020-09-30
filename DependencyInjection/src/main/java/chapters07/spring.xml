@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- setter injection-->
+	<bean id="CricketCoachBean" class="com.example.helloworld.CricketCoach">
+		<property name="fortune" ref="happyFortuneBean" />
+	</bean>
+
+
+	<bean id="happyFortuneBean" class="com.example.helloworld.HappyFortune" />
+
+	<!--Constructor injection
+    <bean id="myCoach" class="com.example.helloworld.CricketCoach">
+          <constructor-arg ref="happyBean"> </constructor-arg>
+    </bean> -->
+
+</beans>
+

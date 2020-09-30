@@ -3,20 +3,22 @@ package com.example.helloworld;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-public class HelloSpringApp
+public class BeanLifecyleApp
 {
     public static void main(String[] args)
     {
-        //get application context
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        //get appligcation context
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanlifecycle.xml");
 
         //get the bean from application context
-        Coach coachObj=context.getBean("myCoach", Coach.class);
+        Coach coachObj1=context.getBean("myCoach", Coach.class);
 
         //invoke methods on the bean
-        System.out.println(coachObj.getDailyFortune());
+        System.out.println("Memory reference of object1: "+coachObj1);
 
         //close application context
         context.close();
     }
+
+
 }

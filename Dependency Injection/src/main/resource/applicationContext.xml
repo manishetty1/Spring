@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+        <bean id="triangle" class="com.example.helloworld.Triangle">
+            <property name="pointA" ref="zeropoint" />
+            <property name="pointB" ref="point2" />
+            <property name="pointC" ref="point3" />
+        </bean>
+        <bean id="zeropoint" class="com.example.helloworld.Point">
+            <property name="x" value="0" />
+            <property name="y" value="0" />
+        </bean>
+        <bean id="point2" class="com.example.helloworld.Point">
+            <property name="x" value="20" />
+            <property name="y" value="0" />
+        </bean>
+        <bean id="point3" class="com.example.helloworld.Point">
+            <property name="x" value="0" />
+            <property name="y" value="20" />
+        </bean>
+
+</beans>
+
+
+
+
+
